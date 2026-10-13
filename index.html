@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#f8f5ef" />
+		<meta name="description" content="Flores frescas, arreglos hechos con cariño y pedidos sencillos." />
+		<title>Flor de Abril | Flores por pedido</title>
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<link rel="icon" href="/icons/flor-192.png" sizes="192x192" type="image/png" />
+		<link rel="preconnect" href="https://images.unsplash.com" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/styles.css" />
+		<link rel="stylesheet" href="/contact.css" />
+	</head>
+	<body>
+		<header class="topbar">
+			<a class="brand" href="#inicio" aria-label="Flor de Abril, inicio">
+				<img src="/icons/flor.svg" alt="" width="35" height="35" />
+				<span>flor de <strong>abril</strong></span>
+			</a>
+			<nav class="nav-links" aria-label="Navegación principal">
+				<a href="#catalogo">Catálogo</a>
+				<a href="#nosotros">Nuestra floristería</a>
+				<a href="#escribenos">Escríbenos</a>
+			</nav>
+			<div class="header-actions">
+				<span id="connection-status" class="connection-status" role="status"><i></i> En línea</span>
+				<button class="icon-button install-button" id="install-button" type="button" aria-label="Instalar aplicación" title="Instalar aplicación" hidden>
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" /></svg>
+				</button>
+				<button class="icon-button notification-button" id="notification-button" type="button" aria-label="Activar notificaciones" title="Activar notificaciones">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4" /></svg>
+				</button>
+				<button class="cart-button" id="cart-toggle" type="button" aria-label="Abrir carrito">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 11.2a2 2 0 0 0 2 1.6h8.7a2 2 0 0 0 2-1.6L21 8H6m4 13h.01M17 21h.01" /></svg>
+					<span>Mi pedido</span><b id="cart-count">0</b>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" id="inicio">
+				<div class="hero-copy">
+					<p class="eyebrow"><span></span> FLORES DE TEMPORADA · HECHAS A MANO</p>
+					<h1>Un detalle bonito<br />lo cambia <em>todo.</em></h1>
+					<p class="hero-description">Ramos frescos preparados con calma, para celebrar lo cotidiano y lo extraordinario.</p>
+					<a class="primary-link" href="#catalogo">Encuentra tu ramo <span aria-hidden="true">↗</span></a>
+					<div class="hero-note"><span class="mini-flower">✿</span><span>Arreglos por encargo<br /><strong>con mucho cariño</strong></span></div>
+				</div>
+				<div class="hero-photo" role="img" aria-label="Ramo colorido de flores frescas">
+					<span class="photo-caption">Flores que dicen lo que sientes.</span>
+					<div class="hero-sticker"><span>hecho</span><strong>con amor</strong><span>en el taller</span></div>
+				</div>
+				<div class="hero-index" aria-hidden="true">01 / 03</div>
+			</section>
+
+			<section class="catalog-section" id="catalogo">
+				<div class="section-heading">
+					<div><p class="eyebrow">UNA PEQUEÑA SELECCIÓN</p><h2>Flores para regalar <em>bonito</em></h2></div>
+					<p>Todos nuestros arreglos se preparan al recibir tu pedido.<br />Las flores pueden variar un poquito según la temporada.</p>
+				</div>
+				<div class="catalog-tools">
+					<div class="filters" role="group" aria-label="Filtrar catálogo">
+						<button class="filter-button active" data-filter="todos" type="button">Todos <span>06</span></button>
+						<button class="filter-button" data-filter="ramos" type="button">Ramos</button>
+						<button class="filter-button" data-filter="detalles" type="button">Detalles</button>
+					</div>
+					<label class="search-box">
+						<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+						<input id="search-input" type="search" placeholder="Buscar flores" aria-label="Buscar flores" />
+					</label>
+				</div>
+				<div class="product-grid" id="product-grid" aria-live="polite"></div>
+				<p class="empty-state" id="empty-state" hidden>No encontramos flores con ese nombre. Prueba otra búsqueda.</p>
+			</section>
+
+			<section class="promise" id="nosotros">
+				<div class="promise-mark" aria-hidden="true">✿</div>
+				<p class="eyebrow">UN TALLER PEQUEÑO, FLORES GRANDES</p>
+				<h2>Elegimos cada tallo<br />como si fuera <em>para alguien nuestro.</em></h2>
+				<p>Trabajamos en pequeños lotes para que cada ramo llegue fresco, único y listo para alegrarle el día a alguien.</p>
+				<a href="#catalogo">Ver los arreglos <span aria-hidden="true">→</span></a>
+			</section>
+
+			<section class="contact-section" id="escribenos">
+				<div class="contact-inner">
+					<div class="contact-copy">
+						<span class="strip-icon" aria-hidden="true">✳</span>
+						<p class="eyebrow">EL TALLER TE LEE</p>
+						<h2>¿Buscas algo <em>especial?</em></h2>
+						<p>Sin internet, el mensaje queda en espera. Al reconectar, se sincroniza en este dispositivo.</p>
+						<p class="contact-status" id="contact-delivery-status" role="status" aria-live="polite" hidden></p>
+					</div>
+					<form class="contact-form" id="contact-form">
+						<label>Tu mensaje<textarea name="message" required rows="3" maxlength="1000" placeholder="Cuéntanos sobre tu idea…"></textarea></label>
+						<button class="contact-submit" type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer"><a class="brand" href="#inicio"><img src="/icons/flor.svg" alt="" width="28" height="28" /><span>flor de <strong>abril</strong></span></a><span>Flores frescas, días felices. <span id="year"></span></span><a href="#inicio">Volver arriba ↑</a></footer>
+
+		<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+		<aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+			<div class="drawer-heading"><div><p class="eyebrow">FLORES ELEGIDAS CON CARIÑO</p><h2 id="cart-title">Tu pedido</h2></div><button class="close-button" id="cart-close" type="button" aria-label="Cerrar pedido">×</button></div>
+			<div class="cart-items" id="cart-items"></div>
+			<div class="cart-empty" id="cart-empty"><span>✿</span><p>Tu pedido empieza<br />con una flor.</p><button type="button" class="text-button" id="browse-button">Ver el catálogo →</button></div>
+			<form class="checkout-form" id="checkout-form" hidden>
+				<label>Tu nombre<input name="name" autocomplete="name" required maxlength="70" placeholder="¿Cómo te llamas?" /></label>
+				<label>Teléfono de contacto<input name="phone" autocomplete="tel" required type="tel" maxlength="24" placeholder="Para coordinar la entrega" /></label>
+				<label>¿Algo que debamos saber?<textarea name="note" rows="2" maxlength="240" placeholder="Colores, dedicatoria, fecha… (opcional)"></textarea></label>
+				<div class="cart-total"><span>Total estimado</span><strong id="cart-total">$0</strong></div>
+				<button class="checkout-button" type="submit">Enviar mi pedido <span aria-hidden="true">↗</span></button>
+				<p class="checkout-footnote">El taller confirmará disponibilidad y entrega contigo.</p>
+			</form>
+		</aside>
+		<div class="toast" id="toast" role="status" aria-live="polite"></div>
+		<script src="/app.js" defer></script>
+	</body>
+</html>
